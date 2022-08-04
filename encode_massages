@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read -p "Would you like to decode or encode? " task
+read -p "Enter the massage you would love to decode or encode " msg
+
+if [ $task == "encode" ];
+then 
+	echo  $msg | base64
+elif [ $task == "decode" ];
+then 
+	echo $msg | base64 --decode
+else 
+	echo ERROR!!!please enter a valid command 
+fi 
