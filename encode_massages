@@ -2,11 +2,10 @@
 
 read -p "Would you like to decode or encode? " task
 
-while [ $task != 'encode' ] || [ $task != 'decode'];
+while [ $task != 'encode' ]  || [ $task != 'decode'  ];
 	do
-	read -p "Would you like to decode or encode? " task
-	
-	if [ $task == 'encode' ]; 
+		read -p "Would you like to decode or encode? " task
+	if [ $task == 'encode'  ]; 
 	then
 		read -p "Enter the massage you would love to decode or encode " msg
 		echo  $msg | base64
@@ -16,7 +15,6 @@ while [ $task != 'encode' ] || [ $task != 'decode'];
 		read -p "Enter the massage you would love to decode or encode " msg
 		echo $msg | base64 --decode
 		break
-	
-	fi 
-	done
 
+	fi 
+	done 
